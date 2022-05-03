@@ -1,0 +1,552 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*Estos son los estilos del menu de navegacion del sitio web*/
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: row;
+    background-color: rgb(140, 151, 147);
+    width: 100%;
+    align-items: center;
+}
+nav a {
+    text-decoration: none;
+    color: rgb(191, 168, 147);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    display: block;
+    flex-grow: 1;
+    text-align: center;
+    padding: 15px 15px;
+}
+nav a:hover {
+    padding: 15px 15px;
+    background: rgba(0, 0, 0, 0.3);
+} 
+.logo-worksafe {
+    width: 55px;
+    height: 55px;
+}
+.d-block{
+    width: 100%;
+    height: 500px;
+}
+.mi-clase {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*Aquì comienzo a darle estilos al archivo index*/
+.img-main{
+    width: 100%;
+    height: 100%;
+}
+.iframe-main {
+    width: 100%;
+    height: 100%;
+}
+.section-main-index {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 100%);
+    gap: 3px 3px;
+    grid-template-areas: 
+    "div-img-p div-iframe"
+    "div-p div-p"
+    ;
+}
+.div-img{
+    grid-area: div-img-p;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    animation-name: animacion;
+    animation-duration: 1.3s;
+}
+@keyframes animacion{
+    0%{
+        transform: scale(.3);
+    }
+}
+
+.div-iframe {
+    grid-area: div-iframe;
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    animation-name: animar;
+    animation-duration: 1.5s;
+}
+@keyframes animar{
+    0%{
+        transform: scale(.3);
+    }
+}
+.div-p {
+    grid-area: div-p;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 100%;
+    font-size: 20px;
+    color: rgb(191, 168, 147);
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.boton-whatsapp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #ffffff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+/*Estileando el footer*/
+footer{
+    width: 100%;
+    padding: 50px 0px;
+}
+.contenedor-footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+}
+.caja-footer{
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+}
+.caja-footer .logo img{
+    width: 100px;
+}
+.caja-footer .terminos-condiciones{
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 18px;
+}
+.caja-footer h2{
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 700;
+}
+.caja-footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 500;
+}
+.caja-footer a:hover{
+    opacity: 0.8;
+}
+.caja-copywrigth{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+.caja-copywrigth p{
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+.caja-copywrigth hr{
+    height: 1px;
+    background-color: #7a7a7a;
+}
+@media screen and (max-width: 768px) {
+    .section-main-index {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(3, 100%);
+        gap: 3px 3px;
+        grid-template-areas: 
+        "div-img-p" 
+        "div-p" 
+        "div-p"
+        "div-iframe"
+        ;
+    }
+    .div-img{
+        grid-area: div-img-p;
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+    }
+    .div-iframe {
+        grid-area: div-iframe;
+        margin-top: 10px;
+        width: 100%;
+        height: 100%;
+    }
+    .div-p {
+        grid-area: div-p;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+        color: rgb(191, 168, 147);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+}
+@media screen and (max-width: 414px) {
+    .section-main-index {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(1, 100%);
+        gap: 3px 3px;
+        grid-template-areas: 
+        "div-img-p" 
+        "div-p" 
+        "div-p"
+        "div-iframe"
+        ;
+    }
+    .div-img{
+        grid-area: div-img-p;
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+    }
+    .div-iframe {
+        grid-area: div-iframe;
+        margin-top: 10px;
+        width: 100%;
+        height: 100%;
+    }
+    .div-p {
+        grid-area: div-p;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+        color: rgb(191, 168, 147);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+}
+/*Aqui estan los estilos de la pagina nuestros servicios, donde para que se notara el cambio entre una pantalla desktop y mobile utilice una sola columna para mobile. Para asi poder mantener un tamaño de imagen grande, teniendo en cuenta el tamaño pequeño de la pantalla*/
+.section-nuestros-servicios {
+    display: grid;
+    grid-template-columns: repeat (2, 100%);
+    grid-template-rows: repeat(2, 50%);
+    gap: 3px 3px;
+    grid-template-areas: 
+    "div-uno-nuestros-servicios div-dos-nuestros-servicios"
+    "div-tres-nuestros-servicios div-cuatro-nuestros-servicios"
+    ;
+    justify-content: space-evenly;
+    justify-content: center;
+}
+.div-uno-nuestros-servicios {
+    grid-area: div-uno-nuestros-servicios;
+    border: 1px;
+    height: 50%;
+    width: 50%;
+}
+/*A cada imagen le di tiempo de transicion de mas rapido a mas despacio para hacer un efecto en cadena*/
+.div-imguno-nuestros-servicios {
+    width: 400px;
+    height: 400px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    animation-name: imagen-uno;
+    animation-duration: 1s;
+    animation-direction: reverse;
+}
+@keyframes imagen-uno {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.div-uno-nuestros-servicios-puno {
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-top: 5px;
+    padding-right: 5px;
+    color: rgb(191, 168, 147);
+}
+.div-dos-nuestros-servicios {
+    grid-area: div-dos-nuestros-servicios;
+    border: 1px;
+    height: 50%;
+    width: 50%;
+}
+.div-imgdos-nuestros-servicios {
+    width: 400px;
+    height: 400px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    animation-name: imagen-dos;
+    animation-duration: 1.2s;
+    animation-direction: reverse;
+}
+@keyframes imagen-dos {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.div-uno-nuestros-servicios-pdos {
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-top: 5px;
+    color: rgb(191, 168, 147);
+}
+.div-tres-nuestros-servicios {
+    grid-area: div-tres-nuestros-servicios;
+    border: 1px;
+    height: 50%;
+    width: 50%;
+}
+.div-imgtres-nuestros-servicios {
+    width: 400px;
+    height: 400px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    animation-name: imagen-tres;
+    animation-duration: 1.4s;
+    animation-direction: reverse;
+}
+@keyframes imagen-tres {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.div-uno-nuestros-servicios-ptres {
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-top: 5px;
+    color: rgb(191, 168, 147);
+}
+.div-cuatro-nuestros-servicios {
+    grid-area: div-cuatro-nuestros-servicios;
+    border: 1px;
+    height: 50%;
+    width: 50%;
+}
+.div-imgcuatro-nuestros-servicios {
+    width: 400px;
+    height: 400px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    animation-name: imagen-cuatro;
+    animation-duration: 1.6s;
+    animation-direction: reverse;
+}
+@keyframes imagen-cuatro {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.div-uno-nuestros-servicios-pcuatro {
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-top: 5px;
+    color: rgb(191, 168, 147);
+}
+@media screen and (max-width: 420px) {
+    .section-nuestros-servicios {
+        display: grid;
+        grid-template-columns: repeat (1, 100%);
+        grid-template-rows: repeat(4, 25%);
+        gap: 3px 3px;
+        grid-template-areas: 
+        "div-uno-nuestros-servicios" 
+        "div-dos-nuestros-servicios"
+        "div-tres-nuestros-servicios" 
+        "div-cuatro-nuestros-servicios"
+        ;
+        justify-content: space-evenly;
+        justify-content: center;
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+    .div-uno-nuestros-servicios {
+        grid-area: div-uno-nuestros-servicios;
+        border: 1px;
+        height: 25%;
+        width: 100%;
+    }
+    .div-imguno-nuestros-servicios {
+        width: 400px;
+        height: 400px;
+    }
+    .div-uno-nuestros-servicios-puno {
+        text-align: left;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        margin-top: 5px;
+        padding-right: 5px;
+        color: rgb(191, 168, 147);
+    }
+    .div-dos-nuestros-servicios {
+        grid-area: div-dos-nuestros-servicios;
+        border: 1px;
+        height: 25%;
+        width: 100%;
+    }
+    .div-imgdos-nuestros-servicios {
+        width: 400px;
+        height: 400px;
+    }
+    .div-uno-nuestros-servicios-pdos {
+        text-align: left;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        margin-top: 5px;
+        color: rgb(191, 168, 147);
+    }
+    .div-tres-nuestros-servicios {
+        grid-area: div-tres-nuestros-servicios;
+        border: 1px;
+        height: 25%;
+        width: 100%;
+    }
+    .div-imgtres-nuestros-servicios {
+        width: 400px;
+        height: 400px;
+    }
+    .div-uno-nuestros-servicios-ptres {
+        text-align: left;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        margin-top: 5px;
+        color: rgb(191, 168, 147);
+    }
+    .div-cuatro-nuestros-servicios {
+        grid-area: div-cuatro-nuestros-servicios;
+        border: 1px;
+        height: 25%;
+        width: 100%;
+    }
+    .div-imgcuatro-nuestros-servicios {
+        width: 400px;
+        height: 400px;
+    }
+    .div-uno-nuestros-servicios-pcuatro {
+        text-align: left;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        margin-top: 5px;
+        color: rgb(191, 168, 147);
+    }
+}
+/*Aquì le doy estilo a la pagina de contacto*/
+.etiqueta-form {
+    width: 450px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+.h-dos-contacto {
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+#boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    background: rgb(191, 168, 147);
+    color: #ffffff;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    border: none;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+#boton span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+#boton::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #343434;
+    position: absolute;
+    z-index: 1;
+    top: -80px;
+    left: 0;
+    transition: .3s ease-in-out all;
+}
+#boton:hover::after{
+    top: 0;
+}
+.iframe-maps{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    animation-name: mapsanime;
+    animation-duration: 1.5s;
+}
+
+@keyframes mapsanime{
+    0%{
+        transform: scale(.3);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .etiqueta-form {
+        width: 100%;
+    }
+}
